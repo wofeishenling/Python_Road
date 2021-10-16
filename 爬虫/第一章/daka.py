@@ -59,7 +59,7 @@ resp2 = session.post(url2,data=dat2,headers=my_headers1)
 smtp = smtplib.SMTP()
 smtp.connect('smtp.qq.com', 587)#这里使用163来发送邮件qq的话改为smtp.qq.com
 username = '805456875@qq.com'#你的邮箱名
-password = 'qmgyrirxsttgbeej'#你的动态密码（注意这里不是你的密码而是你在163开启的smtp的动态码）
+password = '******'#你的动态密码（注意这里不是你的密码而是你在163开启的smtp的动态码）
 smtp.login(username, password)
 sender = '805456875@qq.com'#发送人邮箱名
 receiver = 'wofeishenling@hotmail.com'#接收者邮箱
