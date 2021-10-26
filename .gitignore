@@ -1,1 +1,4 @@
-/acllmdb
+/aclImdb
+/IMDB Data
+/pytorch/IMDB Data
+*.csv
