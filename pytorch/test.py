@@ -13,6 +13,6 @@ def validate_zipf(text,ranklimit):
     plt.savefig('./ex.jpg', bbox_inches='tight', dpi=300)
 
 def test():
-    text=gb.words(fileids=['shakespeare-hamlet.txt'])
+    text=gb.words(fileids=['austen-emma.txt'])
     validate_zipf(text,150)
 test()
