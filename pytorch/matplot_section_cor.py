@@ -6,7 +6,7 @@ def show_cor_of(info_table,x,y,z,sortkey=''):
     if(sortkey!=''):
         info_table.sort_values(by=sortkey,ascending='',inplace=True)
     size = info_table.index.size
-    p_list = np.linspace(1,0,int(11))
+    p_list = np.linspace(1,0,int(30))
     cor_list = []
     cor_list.append([])
     cor_list.append([])
@@ -27,9 +27,9 @@ def show_cor_of(info_table,x,y,z,sortkey=''):
     x1 = p_list
     y1 = cor_list[0]
     y2 = cor_list[1]
-    plt.xlabel("persent%")
-    plt.ylabel("correlationship")
-    plt.plot(x1,y1)
-    plt.plot(x1,y2)
+    plt.xlabel("%")
+    plt.ylabel("correlation")
+    plt.plot(x1,y1,lable = y)
+    plt.plot(x1,y2,lable = z)
     plt.show()
     plt.savefig('./cor_diff_rank.jpg', bbox_inches='tight', dpi=300)
