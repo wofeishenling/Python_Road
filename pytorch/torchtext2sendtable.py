@@ -15,7 +15,7 @@ def torchtext2nltkMLE(train_iter, firstn):
             msent = re.sub('<[^<]+?>|\"|_|,', '', msent)
             msent = re.sub('\?|!|:|\.{2,}', '.', msent)
             msent = re.sub('\.{2,}','.',msent)
-            msent = re.sub('\([^\)]+\)', ' ', msent)
+            msent = re.sub('\([^\)]+\)|\'', ' ', msent)
             sent_list = msent.split('.')
             sent_list = [item for item in filter(lambda x:x != '', sent_list)]
             send_list += sent_list
